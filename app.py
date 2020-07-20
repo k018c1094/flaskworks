@@ -9,7 +9,8 @@ def index():
 @app.route("/send",methods=["POST"])
 def send():
     msg = request.form.get("msg")
-    return render_template("receive.html", message=msg)
+    msga = request.form.get("msga")
+    return render_template("receive.html", message=msg, messagea=msga)
 
 if __name__=="__main__" :
     app.debug = True
